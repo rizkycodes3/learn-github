@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 2rem 10rem;
+}
+h1 {
+  margin-bottom: 2rem;
+  border-bottom: 1mm solid black;
+  padding-bottom: 1mm;
+}
