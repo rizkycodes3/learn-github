@@ -10,3 +10,7 @@ h1 {
   border-bottom: 1mm solid black;
   padding-bottom: 1mm;
 }
+footer p {
+  color: blueviolet;
+  margin-top: 1.5rem;
+}
