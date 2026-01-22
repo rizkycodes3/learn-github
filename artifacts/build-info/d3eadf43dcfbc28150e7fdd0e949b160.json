@@ -1,0 +1,613 @@
+{
+	"id": "d3eadf43dcfbc28150e7fdd0e949b160",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.33",
+	"solcLongVersion": "0.8.33+commit.64118f21",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"index.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.33;\r\n\r\ncontract wallet {\r\n    address private owner;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"index.sol": {
+				"wallet": {
+					"abi": [
+						{
+							"inputs": [],
+							"stateMutability": "nonpayable",
+							"type": "constructor"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"index.sol\":61:168  contract wallet {... */\n  mstore(0x40, 0x80)\n    /* \"index.sol\":114:165  constructor() {... */\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  revert(0x00, 0x00)\ntag_1:\n  pop\n    /* \"index.sol\":147:157  msg.sender */\n  caller\n    /* \"index.sol\":139:144  owner */\n  0x00\n  0x00\n    /* \"index.sol\":139:157  owner = msg.sender */\n  0x0100\n  exp\n  dup2\n  sload\n  dup2\n  0xffffffffffffffffffffffffffffffffffffffff\n  mul\n  not\n  and\n  swap1\n  dup4\n  0xffffffffffffffffffffffffffffffffffffffff\n  and\n  mul\n  or\n  swap1\n  sstore\n  pop\n    /* \"index.sol\":61:168  contract wallet {... */\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"index.sol\":61:168  contract wallet {... */\n      mstore(0x40, 0x80)\n      revert(0x00, 0x00)\n\n    auxdata: 0xa2646970667358221220bf19c9cc900858388a120f0dffe509c0806e1281e318b2cd07cf7e6f4866108664736f6c63430008210033\n}\n",
+						"bytecode": {
+							"functionDebugData": {
+								"@_12": {
+									"entryPoint": null,
+									"id": 12,
+									"parameterSlots": 0,
+									"returnSlots": 0
+								}
+							},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600e575f5ffd5b50335f5f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550603e8060595f395ff3fe60806040525f5ffdfea2646970667358221220bf19c9cc900858388a120f0dffe509c0806e1281e318b2cd07cf7e6f4866108664736f6c63430008210033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xE JUMPI PUSH0 PUSH0 REVERT JUMPDEST POP CALLER PUSH0 PUSH0 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF MUL NOT AND SWAP1 DUP4 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND MUL OR SWAP1 SSTORE POP PUSH1 0x3E DUP1 PUSH1 0x59 PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xBF NOT 0xC9 0xCC SWAP1 ADDMOD PC CODESIZE DUP11 SLT 0xF 0xD SELFDESTRUCT JUMPF 0x9C0 DUP1 PUSH15 0x1281E318B2CD07CF7E6F4866108664 PUSH20 0x6F6C634300082100330000000000000000000000 ",
+							"sourceMap": "61:107:0:-:0;;;114:51;;;;;;;;;;147:10;139:5;;:18;;;;;;;;;;;;;;;;;;61:107;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "60806040525f5ffdfea2646970667358221220bf19c9cc900858388a120f0dffe509c0806e1281e318b2cd07cf7e6f4866108664736f6c63430008210033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xBF NOT 0xC9 0xCC SWAP1 ADDMOD PC CODESIZE DUP11 SLT 0xF 0xD SELFDESTRUCT JUMPF 0x9C0 DUP1 PUSH15 0x1281E318B2CD07CF7E6F4866108664 PUSH20 0x6F6C634300082100330000000000000000000000 ",
+							"sourceMap": "61:107:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12400",
+								"executionCost": "24328",
+								"totalCost": "36728"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 114,
+									"end": 165,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 147,
+									"end": 157,
+									"name": "CALLER",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 144,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 139,
+									"end": 144,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "PUSH",
+									"source": 0,
+									"value": "100"
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "EXP",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "SLOAD",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "NOT",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "DUP4",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "OR",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "SSTORE",
+									"source": 0
+								},
+								{
+									"begin": 139,
+									"end": 157,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 61,
+									"end": 168,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220bf19c9cc900858388a120f0dffe509c0806e1281e318b2cd07cf7e6f4866108664736f6c63430008210033",
+									".code": [
+										{
+											"begin": 61,
+											"end": 168,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 61,
+											"end": 168,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 61,
+											"end": 168,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 61,
+											"end": 168,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 61,
+											"end": 168,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 61,
+											"end": 168,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"index.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.33+commit.64118f21\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"index.sol\":\"wallet\"},\"evmVersion\":\"osaka\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"index.sol\":{\"keccak256\":\"0xea6975b123cd6d246fc36d113ad6480fed81195998247cd04c0d55cf4b9bfc56\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://acaae997caf58a40d077c89598f42b57b4633fa4bb44d89b263a48727fbd7d60\",\"dweb:/ipfs/QmZYtdAv5jYjxbxjTXrLKg9naM4U3j73MKSL1YgK8WAFuJ\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 3,
+								"contract": "index.sol:wallet",
+								"label": "owner",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_address"
+							}
+						],
+						"types": {
+							"t_address": {
+								"encoding": "inplace",
+								"label": "address",
+								"numberOfBytes": "20"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"index.sol": {
+				"ast": {
+					"absolutePath": "index.sol",
+					"exportedSymbols": {
+						"wallet": [
+							13
+						]
+					},
+					"id": 14,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".33"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:24:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "wallet",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 13,
+							"linearizedBaseContracts": [
+								13
+							],
+							"name": "wallet",
+							"nameLocation": "70:6:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"id": 3,
+									"mutability": "mutable",
+									"name": "owner",
+									"nameLocation": "100:5:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 13,
+									"src": "84:21:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "84:7:0",
+										"stateMutability": "nonpayable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"visibility": "private"
+								},
+								{
+									"body": {
+										"id": 11,
+										"nodeType": "Block",
+										"src": "128:37:0",
+										"statements": [
+											{
+												"expression": {
+													"id": 9,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"leftHandSide": {
+														"id": 6,
+														"name": "owner",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 3,
+														"src": "139:5:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_address",
+															"typeString": "address"
+														}
+													},
+													"nodeType": "Assignment",
+													"operator": "=",
+													"rightHandSide": {
+														"expression": {
+															"id": 7,
+															"name": "msg",
+															"nodeType": "Identifier",
+															"overloadedDeclarations": [],
+															"referencedDeclaration": 4294967281,
+															"src": "147:3:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_magic_message",
+																"typeString": "msg"
+															}
+														},
+														"id": 8,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": false,
+														"lValueRequested": false,
+														"memberLocation": "151:6:0",
+														"memberName": "sender",
+														"nodeType": "MemberAccess",
+														"src": "147:10:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_address",
+															"typeString": "address"
+														}
+													},
+													"src": "139:18:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"id": 10,
+												"nodeType": "ExpressionStatement",
+												"src": "139:18:0"
+											}
+										]
+									},
+									"id": 12,
+									"implemented": true,
+									"kind": "constructor",
+									"modifiers": [],
+									"name": "",
+									"nameLocation": "-1:-1:-1",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 4,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "125:2:0"
+									},
+									"returnParameters": {
+										"id": 5,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "128:0:0"
+									},
+									"scope": 13,
+									"src": "114:51:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "public"
+								}
+							],
+							"scope": 14,
+							"src": "61:107:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "33:135:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
